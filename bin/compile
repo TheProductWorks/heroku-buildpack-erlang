@@ -90,6 +90,8 @@ case $TOOL in
     "rebar")
         echo "-----> Building with Rebar"
         ./rebar get-deps compile 2>&1 | sed -u 's/^/       /'
+        echo "-----> Making release with Rebar"
+        ./rebar generate
         ;;
     "rebar3")
         echo "-----> Building release with Rebar3"
